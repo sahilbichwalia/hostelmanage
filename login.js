@@ -74,7 +74,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 
     // Get the backend URL from the environment variable
-    const backendUrl ='http://localhost:3000'; // Default to localhost if no env variable is set
+    const backendUrl =const backendUrl = process.env.BACKEND_URL || 'http://localhost:3000';
+
 
     // Sending the POST request using fetch
     fetch(`${backendUrl}/login`, {
