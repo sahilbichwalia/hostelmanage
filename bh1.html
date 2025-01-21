@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Management</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="bh1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="msb" id="msb">
+        <div class="side-menu-container">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <!-- BH1 Hostel -->
+                <li><a href="bh1.html"><i class="fa fa-building"></i> Hostel Room</a></li>
+                <!-- BH2 Hostel -->
+                <li><a href="add room.html"><i class="fa fa-plus"></i> Add Room</a></li>
+                <li><a href="deleteroom.html"><i class="fa fa-trash"></i> Remove Room</a></li>
+            </ul>
+            <hr>
+            <!-- Block Navbar for filtering -->
+            <div id="block-navbar">
+                <h3>Blocks</h3>
+                <!-- Block buttons will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+        <i class="fa fa-bars"></i> <!-- Triple bar icon -->
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <h1>Room Management System</h1>
+        <div id="block-navbar"></div>
+        <div id="room-list"></div>
+    </div>
+  <script>
+    const sidebar = document.getElementById('msb');
+    const hamburger = document.getElementById('hamburger');
+
+// Toggle Sidebar and Body Color
+   hamburger.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+  if (sidebar.classList.contains('active')) {
+    hamburger.innerHTML = '<i class="fa fa-bars"></i>';
+    document.body.style.backgroundColor = '#fff';
+  } else {
+    hamburger.innerHTML = '<i class="fa fa-times"></i>';
+    document.body.style.backgroundColor = '#34495e';
+  }
+});
+  </script>
+    
+
+    <script src="bh1.js"></script>
+</body>
+</html>

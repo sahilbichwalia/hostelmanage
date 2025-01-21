@@ -1,0 +1,92 @@
+/* Reset body and html to prevent overflow */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    background: linear-gradient(90deg, #C7C5F4, #776BCC);	
+  }
+  
+  /* Sidebar Styling */
+  .msb {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #4C4B90, #7C78B8);
+    padding-top: 50px;
+    transition: transform 0.3s ease;
+    transform: translateX(0); /* Sidebar visible by default */
+  }
+  
+  .msb.active {
+    transform: translateX(-250px); /* Hide sidebar */
+  }
+  
+  .msb .nav > li > a {
+    color: #ecf0f1;
+    padding: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .msb .nav > li > a:hover {
+    background-color: #34495e;
+  }
+  
+  .msb .nav > li > a i {
+    margin-right: 10px;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #fff;
+    background: #34495e;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger i {
+    pointer-events: none;
+  }
+  
+  /* Main Content Styling */
+  .mcw {
+    margin-left: 250px;
+    padding: 40px;
+    background: linear-gradient(90deg, #C7C5F4, #776BCC);
+    min-height: 100vh;
+    transition: margin-left 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+  }
+  
+  .mcw.expanded {
+    margin-left: 0;
+    background-color: #fff; /* Default body color when sidebar is hidden */
+  }
+  
+  /* Prevent unwanted scrollbars */
+  .mcw, .msb {
+    overflow: hidden;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .msb {
+      width: 200px;
+    }
+  
+    .hamburger {
+      top: 15px;
+      left: 15px;
+    }
+  }
+  

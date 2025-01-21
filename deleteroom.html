@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="add room.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hostel Management System</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section for Hostel Management System -->
+        <div class="left-section">
+            <h1 class="left-section__title">Hostel Management System</h1>
+            <p class="left-section__description">
+                Welcome to the JECRC Hostel Management System, where convenience meets technology.
+                Manage room bookings, facilities, and more with ease.
+            </p>
+            <img src="Screenshot (119).png" alt="Hostel Image" class="left-section__image">
+        </div>
+         <!-- Sidebar -->
+  <div class="msb" id="msb">
+    <div class="side-menu-container">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+        
+        <li><a href="bh1.html"><i class="fa fa-building"></i> BH1 Hostel</a></li>
+        <li><a href="add room.html"><i class="fa fa-plus"></i>Add Room</a></li>
+     
+        <li><a href="remove room.html"><i class="fa fa-trash"></i>Remove Room</a></li>
+       
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <i class="fa fa-bars"></i>
+  </div>
+    
+
+        <!-- Right Section (Remove Room Form) -->
+        <div class="screen">
+            <div class="screen__content">
+                <h2 class="add-room__title">Remove Room</h2>
+                <form id="removeRoomForm" class="add-room-form">
+                    <div class="form-field">
+                        <label for="roomNumber">Room Number:</label>
+                        <input type="text" id="roomNumber" name="roomNumber" placeholder="Room Number (e.g., BH1-101-A)" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="block">Block:</label>
+                        <input type="text" id="block" name="block" placeholder="Block (e.g., Block A)" required>
+                    </div>
+                    <button type="submit" class="button">Remove Room</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const sidebar = document.getElementById('msb');
+        const hamburger = document.getElementById('hamburger');
+    
+    // Toggle Sidebar and Body Color
+       hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      if (sidebar.classList.contains('active')) {
+        hamburger.innerHTML = '<i class="fa fa-bars"></i>';
+        document.body.style.backgroundColor = '#fff';
+      } else {
+        hamburger.innerHTML = '<i class="fa fa-times"></i>';
+        document.body.style.backgroundColor = '#34495e';
+      }
+    });
+    </script>
+
+    <script src="deleteroom.js"></script> <!-- Include delete room JS -->
+</body>
+</html>

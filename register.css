@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(135deg, #4C4B90, #7C78B8);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Registration Form Container */
+  .register-container {
+    /* background: linear-gradient(90deg, #ffffff, #f3f3f3);
+    border-radius: 15px;
+    width: 380px;
+    padding: 30px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center; */
+    background: linear-gradient(90deg, #ffffff, #f3f3f3);
+    border-radius: 15px;
+    width: 380px;
+    padding: 30px 40px; /* Increased padding on left and right */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+     margin: 0 auto; 
+  }
+  
+  .register-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4C4B90;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Form Group Styling */
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    color: #4C4B90;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    outline: none;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #4C4B90;
+  }
+  
+  /* Submit Button */
+  .register-btn {
+    background: linear-gradient(135deg, #4C4B90, #7C78B8);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .register-btn:hover {
+    background: linear-gradient(135deg, #7C78B8, #4C4B90);
+    transform: scale(1.05);
+  }
+  
+  .register-btn:active {
+    transform: scale(0.98);
+  }
+  
+  /* Background Shapes */
+  .background-shape {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(70px);
+    opacity: 0.6;
+  }
+  
+  .shape-1 {
+    width: 300px;
+    height: 300px;
+    background: #6C63AC;
+    top: 20%;
+    left: 15%;
+  }
+  
+  .shape-2 {
+    width: 200px;
+    height: 200px;
+    background: #7E7BB9;
+    bottom: 10%;
+    right: 20%;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .register-container {
+      width: 100%;
+      max-width: 95%;
+      padding: 20px;
+    }
+  }
+  

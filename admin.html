@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Management</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="msb" id="msb">
+    <div class="side-menu-container">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+
+        <!-- Register -->
+        <li><a href="register.html"><i class="fa fa-user-plus"></i> Register</a></li>
+        
+        <!-- BH1 Hostel -->
+        <li><a href="bh1.html"><i class="fa fa-building"></i>Hostel room</a></li>
+        
+        <!-- BH2 Hostel -->
+        <li><a href="add room.html"><i class="fa fa-plus"></i>Add Room</a></li>
+
+
+        <li><a href="deleteroom.html"><i class="fa fa-trash"></i>Remove Room</a></li>
+
+        
+        <!-- Delete User -->
+        <li><a href="delete.html"><i class="fa fa-user-times"></i> Delete User</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <i class="fa fa-bars"></i> <!-- Triple bar icon -->
+  </div>
+
+  <div class="mcw" id="mcw">
+    <!-- Main Content Goes Here -->
+    <div class="cv">
+      <h1>Welcome to Hotel Management System</h1>
+      <p>Manage your hotel operations efficiently and easily.</p>
+    </div>
+  </div>
+
+  <!-- JS for Sidebar Toggle -->
+  <script>
+    const sidebar = document.getElementById('msb');
+    const hamburger = document.getElementById('hamburger');
+    const mainContent = document.getElementById('mcw');
+
+    // Toggle Sidebar and Body Color
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      mainContent.classList.toggle('expanded');
+
+      // Change the icon and background color
+      if (sidebar.classList.contains('active')) {
+        hamburger.innerHTML = '<i class="fa fa-bars"></i>'; // Show triple bar
+        document.body.style.backgroundColor = '#fff'; // Reset body color
+      } else {
+        hamburger.innerHTML = '<i class="fa fa-times"></i>'; // Show close icon
+        document.body.style.backgroundColor = '#34495e'; // Dark body background
+      }
+    });
+  </script>
+
+</body>
+</html>
+

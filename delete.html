@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="register.css">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="msb" id="msb">
+    <div class="side-menu-container">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="register.html"><i class="fa fa-user-plus"></i> Register</a></li>
+        <li><a href="#"><i class="fa fa-building"></i> BH1 Hostel</a></li>
+        <li><a href="#"><i class="fa fa-building"></i> BH2 Hostel</a></li>
+        <li><a href="#"><i class="fa fa-user-times"></i> Delete User</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <i class="fa fa-bars"></i>
+  </div>
+
+  <div class="register-container">
+    <h2>Delete Account</h2>
+    <form id="register-form">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="emp_id">Employee ID</label>
+        <input type="text" id="emp_id" name="emp_id" placeholder="Enter your employee ID" required>
+      </div>
+      <div class="form-group">
+        <label for="department">Department</label>
+        <select id="department" name="department" required>
+          <option value="" disabled selected>Select your department</option>
+          <option value="BH1">BH1</option>
+          <option value="BH2">BH2</option>
+          <option value="BH3">BH3</option>
+          <option value="Admin">Admin</option>
+        </select>
+      </div>
+      <button type="submit" class="register-btn">Delete Account</button>
+    </form>
+  </div>
+
+  <!-- JS for Sidebar Toggle and Form Submission -->
+  <script src="delete.js"></script>  <!-- Link to External JS File -->
+
+</body>
+</html>
