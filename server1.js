@@ -1,41 +1,3 @@
-// const express = require('express');
-// const bodyParser = require('body-parser');
-// const cors = require('cors');
-// const { Client } = require('pg');
-// const path = require('path');
-
-// const app = express();
-// const port = 3000;
-
-// // PostgreSQL client setup
-// const client = new Client({
-//   connectionString: 'postgresql://jecrc_owner:Md5Dix4jfrEg@ep-plain-boat-a86yhz6z.eastus2.azure.neon.tech/jecrc?sslmode=require',
-// });
-
-// // Connect to the database
-// client.connect()
-//   .then(() => console.log('Connected to the database'))
-//   .catch(err => console.error('Connection error', err.stack));
-
-
-
-
-// Middleware setup
-// app.use(cors({
-//   origin: 'http://127.0.0.1:5500', // Allow requests only from your frontend origin
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   allowedHeaders: ['Content-Type', 'Authorization'],
-//   credentials: true
-// }));
-// app.use(bodyParser.json());
-
-// // Serve static files from the frontend directory (adjust the path if necessary)
-// app.use(express.static(path.join(__dirname, 'frontend')));
-
-// Routes
-
-require('dotenv').config(); // Load environment variables
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -43,11 +5,11 @@ const { Client } = require('pg');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;  // Hardcoded port
 
-// PostgreSQL client setup using environment variable
+// Hardcoded PostgreSQL connection configuration
 const client = new Client({
-  connectionString: process.env.DB_CONNECTION_STRING,
+  connectionString: 'postgresql://jecrc_owner:Md5Dix4jfrEg@ep-plain-boat-a86yhz6z.eastus2.azure.neon.tech/jecrc?sslmode=require',  // Your database connection string
 });
 
 // Connect to the database
@@ -57,7 +19,7 @@ client.connect()
 
 // Middleware setup
 app.use(cors({
-  origin: process.env.FRONTEND_ORIGIN, // Use environment variable for frontend origin
+  origin: 'http://yourfrontenddomain.com',  // Hardcoded frontend domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -288,3 +250,4 @@ process.on('SIGINT', async () => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
