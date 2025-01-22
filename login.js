@@ -74,7 +74,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 
     // Get the backend URL from the environment variable
-    const backendUrl = 'https://hostelmanage-brdunnpfu-sahilbichwalias-projects.vercel.app:3000';
+    const backendUrl =  process.env.NEXT_PUBLIC_BACKEND_URL ||'https://hostelmanage-brdunnpfu-sahilbichwalias-projects.vercel.app:3000';
 
 
     // Sending the POST request using fetch
